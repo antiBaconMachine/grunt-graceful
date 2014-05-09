@@ -1,0 +1,41 @@
+{
+  "name": "grunt-graceful",
+  "description": "Gracefully fail a grunt task",
+  "version": "0.1.0",
+  "homepage": "https://github.com/antiBaconMachine/grunt-graceful",
+  "author": {
+    "name": "Ollie Edwards",
+    "email": "oliver.s.edwards@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/antiBaconMachine/grunt-graceful.git"
+  },
+  "bugs": {
+    "url": "https://github.com/antiBaconMachine/grunt-graceful/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/antiBaconMachine/grunt-graceful/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.4"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.4"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
