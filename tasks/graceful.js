@@ -14,7 +14,7 @@ module.exports = function(grunt) {
       try {
           grunt.task.run(task);
       } catch (e) {
-          grunt.log.writeln(e);
+          grunt.log.writeln('Gracefully failing: ', e);
       }
   });
 
