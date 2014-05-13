@@ -10,11 +10,13 @@
 
 module.exports = function(grunt) {
 
-  grunt.registerTask('graceful', 'Gracefully fail a grunt task', function(task) {
+  grunt.registerTask('graceful', 'Gracefully fail a grunt task', function(task, message) {
       try {
           grunt.task.run(task);
       } catch (e) {
-          grunt.log.writeln('Gracefully failing: ', e);
+          if (!message || message !== "false") {
+            grunt.log.writeln(message || ('Gracefully failing : ', e));
+          }
       }
   });
 
