@@ -1,7 +1,7 @@
 {
   "name": "grunt-graceful",
   "description": "Gracefully fail a grunt task",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/antiBaconMachine/grunt-graceful",
   "author": {
     "name": "Ollie Edwards",
