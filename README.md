@@ -20,34 +20,9 @@ grunt.loadNpmTasks('grunt-graceful');
 ## The "graceful" task
 
 ### Overview
-In your project's Gruntfile, add a section named `graceful` to the data object passed into `grunt.initConfig()`.
+This plugin is very simple. It has no configuration. It just registers a task named graceful which accepts the name of a
+task as a parameter. It executes this task in a try catch, and logs any errors without stopping grunt execution. That's it.
 
-```js
-grunt.initConfig({
-  graceful: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
-});
-```
-
-### Options
-
-#### options.separator
-Type: `String`
-Default value: `',  '`
-
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
 
 ### Usage Examples
 
@@ -55,31 +30,7 @@ A string value that is used to do something else with whatever else.
 In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
 
 ```js
-grunt.initConfig({
-  graceful: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  graceful: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
+grunt.task.run('graceful:foo');
 ```
 
 ## Contributing
